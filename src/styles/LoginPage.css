@@ -1,0 +1,85 @@
+/* Fondo desenfocado con degradado */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #b993d6, #8ca6db);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  align-items: flex-start;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 320px;
+  position: relative;
+}
+
+.container::before {
+  content: "";
+  background: url('https://cdn-icons-png.flaticon.com/512/847/847969.png') no-repeat center;
+  background-size: 60%;
+  width: 80px;
+  height: 80px;
+  background-color: #1f1f2e;
+  border-radius: 50%;
+  position: absolute;
+  top: -40px;
+  left: calc(50% - 40px);
+}
+
+.container h2 {
+  margin-top: 50px;
+  color: black;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.container input {
+  width: 80%;
+  padding: 12px;
+  margin: 12px 0;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: black;
+  font-size: 14px;
+  outline: none;
+}
+
+.container input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.container button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background-color: #263859;
+  color: white;
+  border-radius: 8px;
+  margin-top: 15px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.container button:hover {
+  background-color: #1e2e4a;
+}
+
+.container p {
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.container a {
+  color: #ffffffcc;
+  text-decoration: underline;
+}
