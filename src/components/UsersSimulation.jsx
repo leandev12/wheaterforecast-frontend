@@ -25,8 +25,8 @@ function UserRegistrationSimulator() {
       (err) => {
         setResults(prev => [
           {
-            user_name: '⚠️ Sin ubicación',
-            status: '❌ Error al obtener geolocalización: ' + err.message,
+            user_name: 'Sin ubicación',
+            status: 'Error al obtener geolocalización: ' + err.message,
             time: new Date().toLocaleTimeString(),
           },
           ...prev,
@@ -43,7 +43,7 @@ function UserRegistrationSimulator() {
       setResults(prev => [
         {
           user_name,
-          status: '❌ Ubicación aún no disponible',
+          status: 'Ubicación aún no disponible',
           time: new Date().toLocaleTimeString(),
         },
         ...prev,
@@ -76,7 +76,7 @@ function UserRegistrationSimulator() {
       setResults(prev => [
         {
           user_name,
-          status: data?.status === 'OK' ? '✅ Registrado' : '⚠️ Falló',
+          status: data?.status === 'OK' ? 'Registrado' : 'Falló',
           time: new Date().toLocaleTimeString(),
         },
         ...prev,
@@ -85,7 +85,7 @@ function UserRegistrationSimulator() {
       setResults(prev => [
         {
           user_name,
-          status: '❌ Error de red: ' + err.message,
+          status: 'Error de red: ' + err.message,
           time: new Date().toLocaleTimeString(),
         },
         ...prev,
@@ -110,8 +110,8 @@ function UserRegistrationSimulator() {
       <h2>Simulación de Registro Concurrente de Usuarios</h2>
       <p>
         {locationReady
-          ? '📍 Ubicación obtenida. Registrando 5 usuarios cada 5 segundos...'
-          : '⏳ Esperando ubicación del usuario...'}
+          ? 'Ubicación obtenida. Registrando 5 usuarios cada 5 segundos...'
+          : 'Esperando ubicación del usuario...'}
       </p>
       <ul>
         {results.slice(0, 20).map((r, idx) => (

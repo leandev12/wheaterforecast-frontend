@@ -52,7 +52,7 @@ function RegisterPage() {
 
           await response.json();
 
-          alert(`✅ Usuario registrado: ${user_name}`);
+          alert(`Usuario registrado: ${user_name}`);
           navigate('/');
         } catch (err) {
           setError('Error al registrar usuario: ' + err.message);

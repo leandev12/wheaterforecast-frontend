@@ -23,7 +23,7 @@ function RegisterActivity() {
       );
 
       if (res.data?.status === 'OK') {
-        setMessage('Actividad registrada exitosamente ✅');
+        setMessage('Actividad registrada exitosamente');
         setUserName('');
         setActivityName('');
         setDescription('');
